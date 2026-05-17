@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>HerryVN</title>
+  <title>Contact - HerryVN</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,17 +136,15 @@
     }
 
     /* =========================
-       HERO
+       PAGE HEADER
     ========================== */
 
-    .hero{
-      padding-top:120px;
+    .page-header{
+      padding:110px 24px 70px;
       text-align:center;
-      padding-left:24px;
-      padding-right:24px;
     }
 
-    .hero-badge{
+    .page-badge{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -161,111 +159,175 @@
       font-size:16px;
       font-weight:600;
 
-      margin-bottom:40px;
+      margin-bottom:34px;
     }
 
-    .hero-title{
-      font-size:92px;
+    .page-title{
+      font-size:82px;
       font-weight:800;
 
       line-height:0.95;
-      letter-spacing:-6px;
+      letter-spacing:-5px;
 
-      max-width:1000px;
-      margin:auto auto 34px;
+      margin-bottom:24px;
     }
 
-    .hero-description{
-      font-size:22px;
-      color:#8d8d8d;
-
-      max-width:980px;
+    .page-description{
+      max-width:760px;
       margin:auto;
 
-      line-height:1.6;
-      font-weight:400;
+      font-size:22px;
+      line-height:1.7;
+
+      color:#8d8d8d;
     }
 
-    .hero-actions{
-      margin-top:52px;
+    /* =========================
+       CONTACT CONTENT
+    ========================== */
 
+    .contact-wrapper{
+      padding:0 22px;
+    }
+
+    .contact-card{
+      max-width:1100px;
+      margin:auto;
+
+      background:#fff;
+
+      border:1px solid #ececec;
+
+      border-radius:30px;
+
+      box-shadow:
+      0 1px 2px rgba(0,0,0,0.03),
+      0 8px 30px rgba(0,0,0,0.03);
+
+      padding:70px;
+
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+    }
+
+    .contact-info h2{
+      font-size:42px;
+      margin-bottom:24px;
+      letter-spacing:-2px;
+    }
+
+    .contact-info p{
+      font-size:18px;
+      line-height:1.9;
+      color:#6b6b6b;
+
+      margin-bottom:34px;
+    }
+
+    .contact-items{
       display:flex;
-      align-items:center;
-      justify-content:center;
+      flex-direction:column;
       gap:24px;
     }
 
-    .black-card{
-      background:#000;
+    .contact-item{
+      padding:24px;
 
-      width:220px;
-      height:68px;
+      border:1px solid #ededed;
 
       border-radius:22px;
 
+      background:#fafafa;
+    }
+
+    .contact-label{
+      font-size:14px;
+      font-weight:700;
+      color:#9a9a9a;
+
+      margin-bottom:8px;
+
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .contact-value{
+      font-size:20px;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .contact-form{
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .input-group label{
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .input-group input,
+    .input-group textarea{
+      width:100%;
+
+      border:1px solid #e5e5e5;
+
+      background:#fafafa;
+
+      border-radius:18px;
+
+      padding:18px 20px;
+
+      font-size:16px;
+
+      font-family:'Inter',sans-serif;
+
+      outline:none;
+
+      transition:0.2s;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus{
+      border-color:#111;
+      background:#fff;
+    }
+
+    .input-group textarea{
+      min-height:180px;
+      resize:vertical;
+    }
+
+    .submit-button{
+      height:64px;
+
+      border:none;
+
+      border-radius:20px;
+
+      background:#000;
+
       color:#fff;
 
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:22px;
-      font-weight:800;
-
-      box-shadow:
-      0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .hero-side{
-      text-align:left;
-    }
-
-    .hero-side-title{
-      font-size:20px;
+      font-size:17px;
       font-weight:700;
-      color:#4d4d4d;
+
+      cursor:pointer;
+
+      transition:0.2s;
     }
 
-    .hero-side-sub{
-      margin-top:8px;
-
-      font-size:18px;
-      color:#a0a0a0;
-    }
-
-    .features{
-      margin-top:72px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      gap:48px;
-      flex-wrap:wrap;
-    }
-
-    .feature-item{
-      display:flex;
-      align-items:center;
-      gap:12px;
-
-      font-size:18px;
-      font-weight:700;
-    }
-
-    .feature-icon{
-      width:34px;
-      height:34px;
-
-      border-radius:50%;
-
-      background:#d9d9d9;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-size:18px;
+    .submit-button:hover{
+      transform:translateY(-1px);
     }
 
     /* =========================
@@ -396,8 +458,12 @@
         display:none;
       }
 
-      .hero-title{
-        font-size:68px;
+      .page-title{
+        font-size:64px;
+      }
+
+      .contact-card{
+        grid-template-columns:1fr;
       }
     }
 
@@ -415,21 +481,17 @@
         justify-content:space-between;
       }
 
-      .hero{
-        padding:80px 24px 40px;
-      }
-
-      .hero-title{
+      .page-title{
         font-size:52px;
         letter-spacing:-3px;
       }
 
-      .hero-description{
+      .page-description{
         font-size:18px;
       }
 
-      .hero-actions{
-        flex-direction:column;
+      .contact-card{
+        padding:40px 28px;
       }
 
       .footer{
@@ -493,82 +555,128 @@
   </div>
 
   <!-- =========================
-       HERO
+       PAGE HEADER
   ========================== -->
 
-  <section class="hero">
+  <section class="page-header">
 
-    <div class="hero-badge">
-      Google Drive Cloud Sync
+    <div class="page-badge">
+      Get In Touch
     </div>
 
-    <h1 class="hero-title">
-      Secure Cloud Sync<br/>
-      For Your Files
+    <h1 class="page-title">
+      Contact
     </h1>
 
-    <p class="hero-description">
+    <p class="page-description">
 
-      Designed for securely syncing photos, markdown files,
-      backups, and personal application data using Google Drive.
+      Questions about privacy, Google Drive synchronization,
+      or application support? Feel free to reach out.
 
     </p>
 
-    <div class="hero-actions">
-
-      <div class="black-card">
-        Google Drive
-      </div>
-
-      <div class="hero-side">
-
-        <div class="hero-side-title">
-          🔥 Continuously Syncing
-        </div>
-
-        <div class="hero-side-sub">
-          User data remains under your control
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="features">
-
-      <div class="feature-item">
-
-        <div class="feature-icon">
-          ✓
-        </div>
-
-        Secure OAuth
-
-      </div>
-
-      <div class="feature-item">
-
-        <div class="feature-icon">
-          ✓
-        </div>
-
-        Google Drive Sync
-
-      </div>
-
-      <div class="feature-item">
-
-        <div class="feature-icon">
-          ✓
-        </div>
-
-        No External Server
-
-      </div>
-
-    </div>
-
   </section>
+
+  <!-- =========================
+       CONTACT CONTENT
+  ========================== -->
+
+  <div class="contact-wrapper">
+
+    <div class="contact-card">
+
+      <div class="contact-info">
+
+        <h2>
+          Contact Information
+        </h2>
+
+        <p>
+
+          HerryVN is an independent software project focused on secure cloud synchronization,
+          Google Drive integrations, and privacy-first user experiences.
+
+        </p>
+
+        <div class="contact-items">
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Email
+            </div>
+
+            <div class="contact-value">
+              nguyenndung@outlook.com
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Location
+            </div>
+
+            <div class="contact-value">
+              Vietnam
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Services
+            </div>
+
+            <div class="contact-value">
+              Google Drive Sync<br/>
+              Cloud Backup<br/>
+              Markdown Storage
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <form class="contact-form">
+
+        <div class="input-group">
+
+          <label>Name</label>
+
+          <input type="text" placeholder="Your name"/>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Email</label>
+
+          <input type="email" placeholder="your@email.com"/>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Message</label>
+
+          <textarea placeholder="Write your message here..."></textarea>
+
+        </div>
+
+        <button class="submit-button">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
 
   <!-- =========================
        FOOTER
