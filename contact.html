@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="google-site-verification" content="chlTxv_kGfgPo3OKPCe1JXNunK2HTclShhkYAg_NZSQ" />
+  <title>Contact - HerryVN</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#f5f5f5;
+      color:#0f0f0f;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .navbar-wrapper{
+      padding:22px 22px 0;
+    }
+
+    .navbar{
+      height:92px;
+      background:#fff;
+
+      border:1px solid #ececec;
+
+      border-radius:26px;
+
+      box-shadow:
+      0 1px 2px rgba(0,0,0,0.03),
+      0 8px 30px rgba(0,0,0,0.03);
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      padding:0 28px;
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:34px;
+    }
+
+    .logo{
+      font-size:58px;
+      font-weight:800;
+      letter-spacing:-4px;
+      line-height:1;
+    }
+
+    .divider{
+      width:1px;
+      height:36px;
+      background:#e7e7e7;
+    }
+
+    .resource-menu{
+      display:flex;
+      align-items:center;
+      gap:26px;
+
+      font-size:17px;
+      font-weight:600;
+    }
+
+    .resource-menu a{
+      color:#111;
+      transition:0.2s;
+    }
+
+    .resource-menu a:hover{
+      opacity:0.6;
+    }
+
+    .nav-center{
+      display:flex;
+      align-items:center;
+      gap:48px;
+    }
+
+    .nav-center a{
+      font-size:17px;
+      font-weight:600;
+      color:#111;
+      transition:0.2s;
+    }
+
+    .nav-center a:hover{
+      opacity:0.6;
+    }
+
+    .nav-button{
+      background:#000;
+      color:#fff;
+
+      height:66px;
+      padding:0 34px;
+
+      border-radius:20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      font-size:16px;
+      font-weight:700;
+
+      transition:0.2s;
+    }
+
+    .nav-button:hover{
+      transform:translateY(-1px);
+    }
+
+    /* =========================
+       PAGE HEADER
+    ========================== */
+
+    .page-header{
+      padding:110px 24px 70px;
+      text-align:center;
+    }
+
+    .page-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      height:42px;
+      padding:0 18px;
+
+      background:#ebebeb;
+
+      border-radius:999px;
+
+      font-size:16px;
+      font-weight:600;
+
+      margin-bottom:34px;
+    }
+
+    .page-title{
+      font-size:82px;
+      font-weight:800;
+
+      line-height:0.95;
+      letter-spacing:-5px;
+
+      margin-bottom:24px;
+    }
+
+    .page-description{
+      max-width:760px;
+      margin:auto;
+
+      font-size:22px;
+      line-height:1.7;
+
+      color:#8d8d8d;
+    }
+
+    /* =========================
+       CONTACT CONTENT
+    ========================== */
+
+    .contact-wrapper{
+      padding:0 22px;
+    }
+
+    .contact-card{
+      max-width:1100px;
+      margin:auto;
+
+      background:#fff;
+
+      border:1px solid #ececec;
+
+      border-radius:30px;
+
+      box-shadow:
+      0 1px 2px rgba(0,0,0,0.03),
+      0 8px 30px rgba(0,0,0,0.03);
+
+      padding:70px;
+
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+    }
+
+    .contact-info h2{
+      font-size:42px;
+      margin-bottom:24px;
+      letter-spacing:-2px;
+    }
+
+    .contact-info p{
+      font-size:18px;
+      line-height:1.9;
+      color:#6b6b6b;
+
+      margin-bottom:34px;
+    }
+
+    .contact-items{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+    }
+
+    .contact-item{
+      padding:24px;
+
+      border:1px solid #ededed;
+
+      border-radius:22px;
+
+      background:#fafafa;
+    }
+
+    .contact-label{
+      font-size:14px;
+      font-weight:700;
+      color:#9a9a9a;
+
+      margin-bottom:8px;
+
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .contact-value{
+      font-size:20px;
+      font-weight:600;
+      line-height:1.6;
+    }
+
+    .contact-form{
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .input-group label{
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .input-group input,
+    .input-group textarea{
+      width:100%;
+
+      border:1px solid #e5e5e5;
+
+      background:#fafafa;
+
+      border-radius:18px;
+
+      padding:18px 20px;
+
+      font-size:16px;
+
+      font-family:'Inter',sans-serif;
+
+      outline:none;
+
+      transition:0.2s;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus{
+      border-color:#111;
+      background:#fff;
+    }
+
+    .input-group textarea{
+      min-height:180px;
+      resize:vertical;
+    }
+
+    .submit-button{
+      height:64px;
+
+      border:none;
+
+      border-radius:20px;
+
+      background:#000;
+
+      color:#fff;
+
+      font-size:17px;
+      font-weight:700;
+
+      cursor:pointer;
+
+      transition:0.2s;
+    }
+
+    .submit-button:hover{
+      transform:translateY(-1px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    .footer-wrapper{
+      padding:120px 22px 22px;
+    }
+
+    .footer{
+      background:#fff;
+
+      border:1px solid #ececec;
+
+      border-radius:30px;
+
+      box-shadow:
+      0 1px 2px rgba(0,0,0,0.03),
+      0 8px 30px rgba(0,0,0,0.03);
+
+      padding:60px;
+
+      display:flex;
+      flex-direction:column;
+    }
+
+    .footer-top{
+      display:flex;
+      justify-content:space-between;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    .footer-brand{
+      max-width:420px;
+    }
+
+    .footer-logo{
+      font-size:42px;
+      font-weight:800;
+      letter-spacing:-3px;
+
+      margin-bottom:20px;
+    }
+
+    .footer-description{
+      color:#7b7b7b;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .footer-columns{
+      display:flex;
+      gap:90px;
+      flex-wrap:wrap;
+    }
+
+    .footer-column h4{
+      font-size:16px;
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .footer-column a{
+      display:block;
+      margin-bottom:14px;
+
+      color:#7b7b7b;
+
+      transition:0.2s;
+    }
+
+    .footer-column a:hover{
+      color:#111;
+    }
+
+    .footer-bottom{
+      margin-top:50px;
+
+      padding-top:30px;
+
+      border-top:1px solid #efefef;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      flex-wrap:wrap;
+      gap:20px;
+
+      color:#8d8d8d;
+      font-size:15px;
+    }
+
+    .footer-socials{
+      display:flex;
+      gap:16px;
+    }
+
+    .footer-socials a{
+      width:42px;
+      height:42px;
+
+      border-radius:12px;
+
+      background:#f4f4f4;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      transition:0.2s;
+    }
+
+    .footer-socials a:hover{
+      background:#000;
+      color:#fff;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width:1200px){
+
+      .nav-center{
+        display:none;
+      }
+
+      .page-title{
+        font-size:64px;
+      }
+
+      .contact-card{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:768px){
+
+      .navbar{
+        height:auto;
+        padding:20px;
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .nav-left{
+        width:100%;
+        justify-content:space-between;
+      }
+
+      .page-title{
+        font-size:52px;
+        letter-spacing:-3px;
+      }
+
+      .page-description{
+        font-size:18px;
+      }
+
+      .contact-card{
+        padding:40px 28px;
+      }
+
+      .footer{
+        padding:40px 28px;
+      }
+
+      .footer-columns{
+        gap:40px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <div class="navbar-wrapper">
+
+    <header class="navbar">
+
+      <div class="nav-left">
+
+        <div class="logo">
+          HerryVN
+        </div>
+
+        <div class="divider"></div>
+ 
+      </div>
+
+      <nav class="nav-center">
+
+        <a href="index.html">Home</a>
+
+        <a href="privacy.html">Privacy</a>
+
+        <a href="terms.html">Terms</a>
+
+      
+
+      </nav>
+
+      <a href="contact.html" class="nav-button">
+        Contact →
+      </a>
+
+    </header>
+
+  </div>
+
+  <!-- =========================
+       PAGE HEADER
+  ========================== -->
+
+  <section class="page-header">
+
+    <div class="page-badge">
+      Get In Touch
+    </div>
+
+    <h1 class="page-title">
+      Contact
+    </h1>
+
+    <p class="page-description">
+
+      Questions about privacy, Google Drive synchronization,
+      or application support? Feel free to reach out.
+
+    </p>
+
+  </section>
+
+  <!-- =========================
+       CONTACT CONTENT
+  ========================== -->
+
+  <div class="contact-wrapper">
+
+    <div class="contact-card">
+
+      <div class="contact-info">
+
+        <h2>
+          Contact Information
+        </h2>
+
+        <p>
+
+          HerryVN is an independent software project focused on secure cloud synchronization,
+          Google Drive integrations, and privacy-first user experiences.
+
+        </p>
+
+        <div class="contact-items">
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Email
+            </div>
+
+            <div class="contact-value">
+              nguyenndung@outlook.com
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Location
+            </div>
+
+            <div class="contact-value">
+              Vietnam
+            </div>
+
+          </div>
+
+          <div class="contact-item">
+
+            <div class="contact-label">
+              Services
+            </div>
+
+            <div class="contact-value">
+              Google Drive Sync<br/>
+              Cloud Backup<br/>
+              Markdown Storage
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <form class="contact-form">
+
+        <div class="input-group">
+
+          <label>Name</label>
+
+          <input type="text" placeholder="Your name"/>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Email</label>
+
+          <input type="email" placeholder="your@email.com"/>
+
+        </div>
+
+        <div class="input-group">
+
+          <label>Message</label>
+
+          <textarea placeholder="Write your message here..."></textarea>
+
+        </div>
+
+        <button class="submit-button">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <div class="footer-wrapper">
+
+    <footer class="footer">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <div class="footer-logo">
+            HerryVN
+          </div>
+
+          <p class="footer-description">
+
+            Secure cloud synchronization platform powered by Google Drive.
+            Built for syncing photos, markdown files, backups,
+            and user-generated content with privacy-first architecture.
+
+          </p>
+
+        </div>
+
+        <div class="footer-columns">
+
+          <div class="footer-column">
+
+            <h4>Pages</h4>
+
+            <a href="index.html">Overview</a>
+
+            <a href="privacy.html">Privacy Policy</a>
+
+            <a href="terms.html">Terms of Service</a>
+
+            <a href="contact.html">Contact</a>
+
+          </div>
+
+          <div class="footer-column">
+
+            <h4>Services</h4>
+
+            <a href="#">Google Drive Sync</a>
+
+            <a href="#">Cloud Backup</a>
+
+            <a href="#">Markdown Storage</a>
+
+            <a href="#">Photo Sync</a>
+
+          </div>
+
+          <div class="footer-column">
+
+            <h4>Contact</h4>
+
+            <a href="mailto:nguyenndung@outlook.com">
+              nguyenndung@outlook.com
+            </a>
+
+            <a href="#">
+              Vietnam
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 HerryVN. All rights reserved.
+        </div>
+
+        <div class="footer-socials">
+
+          <a href="#">𝕏</a>
+
+          <a href="#">in</a>
+
+          <a href="#">GH</a>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
